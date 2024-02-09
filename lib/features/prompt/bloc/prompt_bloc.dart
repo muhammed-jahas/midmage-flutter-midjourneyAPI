@@ -28,7 +28,7 @@ class PromptBloc extends Bloc<PromptEvent, PromptState> {
   }
 
   FutureOr<void> promptInitialEvent(PromptInitialEvent event, Emitter<PromptState> emit) async {
-    Uint8List bytes = await rootBundle.load('assets/images/car.png').then((byteData) => byteData.buffer.asUint8List());
+    Uint8List bytes = await rootBundle.load('assets/images/default-image.png').then((byteData) => byteData.buffer.asUint8List());
   emit(PromptGeneratingImageSuccesState(bytes));
   }
 }
